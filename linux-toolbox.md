@@ -1,3 +1,11 @@
+## Install Microsoft fonts
+```bash
+sudo add-apt-repository multiverse
+sudo apt update
+sudo apt install ttf-mscorefonts-installer
+sudo fc-cache -f -v
+```
+
 ## Bash History
 View current history:
 ```bash
