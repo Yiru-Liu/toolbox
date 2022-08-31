@@ -1,5 +1,25 @@
 # Linux Toolbox
 
+## Swappiness
+### To check swappiness
+```bash
+cat /proc/sys/vm/swappiness
+```
+### To change swappiness
+Edit `/etc/sysctl.conf` as root. <br>
+Add or change: 
+```bash
+vm.swappiness = 10  # Sets swappiness to 10
+```
+Apply the change:
+```bash
+sudo sysctl -p
+```
+#### To change swappiness while the system is running:
+```bash
+sysctl vm.swappiness=10   # Sets swappiness to 10
+```
+
 ## Install Microsoft fonts
 ```bash
 sudo add-apt-repository multiverse
