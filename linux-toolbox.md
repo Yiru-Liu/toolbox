@@ -1,5 +1,11 @@
 # Linux Toolbox
 
+## Back up home directory to Crucial 8X with progress bar and compression with multiple cores
+1. Set current directory to root that contains the `home` directory
+2. `sudo su`
+3. `apt install pv pigz` (if not already installed)
+4. `tar cf - ./home | pv -s $(du -sb ./home | awk '{print $1}') | pigz > ../Crucial\ X8/home.tar.gz`
+
 ## Swappiness
 ### To check swappiness
 ```bash
